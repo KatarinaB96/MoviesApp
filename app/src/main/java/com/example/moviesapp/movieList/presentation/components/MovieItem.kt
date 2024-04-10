@@ -85,7 +85,11 @@ fun MovieItem(movie: Movie, navHostController: NavHostController) {
                     .background(MaterialTheme.colorScheme.primaryContainer),
                 contentAlignment = Alignment.Center
             ) {
-                Icon(imageVector = Icons.Rounded.ImageNotSupported, contentDescription = movie.title)
+                Icon(
+                    modifier = Modifier.size(70.dp),
+                    imageVector = Icons.Rounded.ImageNotSupported,
+                    contentDescription = movie.title
+                )
             }
         }
         if (imageState is AsyncImagePainter.State.Success) {
@@ -103,7 +107,7 @@ fun MovieItem(movie: Movie, navHostController: NavHostController) {
             Spacer(modifier = Modifier.height(6.dp))
             Text(
                 text = movie.title,
-                modifier = Modifier.padding(start = 26.dp, end = 8.dp),
+                modifier = Modifier.padding(start = 16.dp, end = 8.dp),
                 color = Color.White,
                 fontSize = 16.sp,
                 maxLines = 1
